@@ -1,17 +1,8 @@
 <?php 
 
-# Connect  on 'localhost, username, password, database name'.
+# Connect  on 'localhost, root, password, MKTIME database'.
+require 'db_connection.php';
 
-$link = mysqli_connect('localhost','root','','MKTIME'); 
-
-if (!$link) { 
-
-# Otherwise fail gracefully and explain the error. 
-
-die('Could not connect to MySQL: ' . mysqli_error()); 
-
-} 
-
-echo 'Connected to the database successfully!';  
+include 'includes/create.php';
 
 ?>
