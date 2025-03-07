@@ -22,7 +22,7 @@ fi
 rsync -av --exclude='.git/' \
          --exclude='.gitignore' \
          --exclude='.DS_Store' \
-         --exclude='.sql'
+         --exclude='.sql' \
          --exclude='node_modules/' \
          --delete \
          "$SOURCE_DIR" "$DEST_DIR" 2>> "$LOG_FILE"
