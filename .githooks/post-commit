@@ -1,0 +1,39 @@
+#!/bin/bash
+
+# Define source and destination paths
+SOURCE_DIR="/Users/aes/GitRepos/eCommerce-admin-panel/"
+DEST_DIR="/Applications/XAMPP/xamppfiles/htdocs/codespace/workshop3/"
+
+# Log file for errors
+LOG_FILE="/tmp/post-commit-hook.log"
+
+echo "Starting file sync from Git repository to web directory..."
+
+# Create destination directory if it doesn't exist
+if [ ! -d "$DEST_DIR" ]; then
+    mkdir -p "$DEST_DIR"
+    if [ $? -ne 0 ]; then
+        echo "Error: Failed to create destination directory $DEST_DIR" | tee -a "$LOG_FILE"
+        exit 1
+    fi
+fi
+
+# Use rsync to copy files, excluding .git directory and other unnecessary files
+rsync -av --exclude='.git/' \
+         --exclude='.gitignore' \
+         --exclude='.DS_Store' \
+         --exclude='.sql'
+         --exclude='node_modules/' \
+         --delete \
+         "$SOURCE_DIR" "$DEST_DIR" 2>> "$LOG_FILE"
+
+# Check if rsync was successful
+if [ $? -eq 0 ]; then
+    echo "✅ Success: Files have been copied to $DEST_DIR"
+else
+    echo "❌ Error: Failed to copy files to web directory. Check $LOG_FILE for details"
+    exit 1
+fi
+
+exit 0
+
