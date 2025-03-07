@@ -2,7 +2,7 @@
 
 # Connect  on 'localhost, username, password, database name'.
 
-$link = mysqli_connect('localhost','username','password','database name'); 
+$link = mysqli_connect('localhost','root','','MKTIME'); 
 
 if (!$link) { 
 

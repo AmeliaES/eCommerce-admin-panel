@@ -20,3 +20,8 @@ To configure the git hook run:
 ```
 git config core.hooksPath .githooks
 ```
+
+## Getting started
+
+- I had to edit `xamppfiles/etc/php.ini` and change `display_errors = Off` to `display_errors =  On`. For PHP errors to print in the browser.
+

@@ -1,3 +1,5 @@
+-- Database name is MKTIME
+
 -- 'products' Table 
  
 CREATE TABLE IF NOT EXISTS products (
