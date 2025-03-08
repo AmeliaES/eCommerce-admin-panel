@@ -1,5 +1,5 @@
 <?php
- include 'includes/nav.php';
+ include 'nav.php';
 ?>
 
 <h1>Add Item</h1>
@@ -47,5 +47,5 @@
 </div>
 
 <?php
- include 'includes/footer.php';
+ include 'footer.php';
 ?>
