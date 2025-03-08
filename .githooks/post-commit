@@ -20,6 +20,7 @@ fi
 
 # Use rsync to copy files, excluding .git directory and other unnecessary files
 rsync -av --exclude='.git/' \
+         --exclude='.githooks/' \
          --exclude='.gitignore' \
          --exclude='.DS_Store' \
          --exclude='.sql' \
@@ -35,5 +36,6 @@ else
     exit 1
 fi
 
-exit 0
+ls -laR /Applications/XAMPP/xamppfiles/htdocs/codespace/workshop3/
 
+exit 0
