@@ -18,15 +18,20 @@
 .
 ├── .githooks
 │   └── post-commit
-├── .sql
-│   └── create_tables.sql
 ├── README.md
-├── config.php
-├── create.php
-├── footer.php
+├── includes
+│   └── database.php
 ├── index.php
-├── nav.php
-└── read.php
+├── public
+│   ├── create.php
+│   ├── index.php
+│   └── read.php
+├── read.php
+├── sql
+│   └── create_tables.sql
+└── templates
+    ├── footer.php
+    └── nav.php
 ```
 
 ## Set up git hooks - post commit 
