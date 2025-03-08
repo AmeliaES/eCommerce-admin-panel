@@ -1,8 +1,8 @@
 <?php 
 
 # Connect  on 'localhost, root, password, MKTIME database'.
-require 'db_connection.php';
+require 'config.php';
 
-include 'includes/create.php';
+include 'create.php';
 
 ?>
