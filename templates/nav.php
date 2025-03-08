@@ -27,16 +27,16 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                 <li class="nav-item active">
-                    <a class="nav-link" href="create.php">Create <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="/codespace/workshop3/public/create.php">Create <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="read.php">Read</a>
+                    <a class="nav-link" href="/codespace/workshop3/public/read.php">Read</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="update.php">Update</a>
+                    <a class="nav-link" href="/codespace/workshop3/public/update.php">Update</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="delete.php">Delete</a>
+                    <a class="nav-link" href="/codespace/workshop3/public/delete.php">Delete</a>
                 </li>
                 </ul>
             </div>

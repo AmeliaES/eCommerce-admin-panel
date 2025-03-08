@@ -1,8 +1,12 @@
 <?php 
+// Connect to the database.
+require 'includes/database.php';
+?>
 
-# Connect  on 'localhost, root, password, MKTIME database'.
-require 'config.php';
+<?php 
+include 'templates/nav.php';
+?>
 
-include 'create.php';
-
+<?php
+// include 'templates/footer.php';
 ?>
