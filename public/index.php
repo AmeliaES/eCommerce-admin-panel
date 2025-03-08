@@ -1,5 +1,5 @@
 <?php 
-# Connect  on 'localhost, root, password, MKTIME database'.
+// Attempt to connect  to MySQL database
 require 'database.php';
 ?>
 
