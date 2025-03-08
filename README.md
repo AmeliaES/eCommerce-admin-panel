@@ -12,16 +12,37 @@
 - Test your admin panel thoroughly to ensure all CRUD operations are working correctly.
 - Feel free to extend the challenge with extra features to showcase your skills."
 
+## Directory structure
+
+```
+.
+├── .githooks
+│   └── post-commit
+├── .sql
+│   └── create_tables.sql
+├── README.md
+├── config.php
+├── create.php
+├── footer.php
+├── index.php
+├── nav.php
+└── read.php
+```
 
 ## Set up git hooks - post commit 
-This ensures the files are copied to the web server at XAMPP, so we don't have to manually do this. Certain file types and folders are ignored for transfer. eg. the `.sql/` folder is not copied. I wasn't sure where to put the SQL scripts to initially make the database in phpMyAdmin but wanted to make sure they are git tracked.
+This ensures the files are copied to the web server at XAMPP, so we don't have to manually do this. Certain file types and folders are ignored for transfer. eg. the `sql/` folder is not copied. I wasn't sure where to put the SQL scripts to initially make the database in phpMyAdmin but wanted to make sure they are git tracked.
+
+`SOURCE_DIR` and `TARGET_DIR` will need changing. Better practice would be to put this in a `.env` file perhaps, or a `.config` file. So that this project can run on different computers more easily.
 
 To configure the git hook run:
 ```
 git config core.hooksPath .githooks
 ```
 
-## Getting started
+## Things I learnt
 
-- I had to edit `xamppfiles/etc/php.ini` and change `display_errors = Off` to `display_errors =  On`. For PHP errors to print in the browser.
+- I had to edit `xamppfiles/etc/php.ini` and change `display_errors = Off` to `display_errors =  On`. For PHP errors to print in the browser. The handy FAQ documentation at `localhost/dashboard` helped with finding the location of all the config files.
 
+- `mysqli_real_escape_string` escapes any special characters, this can only partly help against SQL injection. The best way to prevent SQL injection is to use prepared statements or if that is not possible then use a strict whitelist (ie. a list of trusted values that can be matched against the entry).
+
+- Difference between `isset()` and `empty()`. `empty()` returns true for values like 0, “0”, false, NULL, empty arrays, empty strings, or if the variable is not set. `isset()` returns true if the variable has a value other than NULL, and false if it’s unset or NULL. This meant we could not use "0" as `item_name` in `create.php`.
