@@ -1,12 +1,12 @@
 <?php 
-// Attempt to connect  to MySQL database
-require 'database.php';
+// Attempt to connect to MySQL database
+require '../includes/database.php';
 ?>
 
 <?php 
-include 'nav.php';
+include '../templates/nav.php';
 ?>
 
 <?php
-// include 'footer.php';
+// include '../templates/footer.php';
 ?>

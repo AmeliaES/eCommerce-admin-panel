@@ -20,13 +20,15 @@ include '../templates/nav.php';
               name="item_desc" 
               required><?php if (isset($_POST['item_desc'])) echo $_POST['item_desc']; ?></textarea>
 
-    <!-- file input for image -->
+    <!-- input box for image path -->
     <label for="image">Image:</label>
-    <input type="file" 
+    <input type="text" 
            id="item_img" 
            class="form-control" 
            name="item_img" 
-           required>
+           required 
+           placeholder="public/assets/images/your-image.png"
+           value="<?php if (isset($_POST['item_img'])) echo $_POST['item_img']; ?>">
 
     <!-- input box for item price -->
     <label for="price">Price:</label>
@@ -63,33 +65,18 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $d = mysqli_real_escape_string($link, trim($_POST['item_desc']));
     }
 
+    // Check for item image.
+    if (empty($_POST['item_img'])) {
+        $errors[] = 'Enter the item image.';
+    } else {
+        $img = mysqli_real_escape_string($link, trim($_POST['item_img']));
+    }
+
     // Check for item price.
     if (empty($_POST['item_price'])) {
         $errors[] = 'Enter the item price.';
     } else {
         $p = mysqli_real_escape_string($link, trim($_POST['item_price']));
-    }
-
-    // Check for file upload.
-    if (isset($_FILES['item_img']) && $_FILES['item_img']['error'] == 0) {
-        $target_dir = "../uploads/";
-        $target_file = $target_dir . basename($_FILES["item_img"]["name"]);
-        $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
-
-        // Check if file is an image.
-        $check = getimagesize($_FILES["item_img"]["tmp_name"]);
-        if ($check !== false) {
-            // Move the uploaded file to the target directory.
-            if (move_uploaded_file($_FILES["item_img"]["tmp_name"], $target_file)) {
-                $img = $target_file;
-            } else {
-                $errors[] = 'Failed to upload image.';
-            }
-        } else {
-            $errors[] = 'File is not an image.';
-        }
-    } else {
-        $errors[] = 'Enter the item image.';
     }
 
     // On success, insert data into the products table.

@@ -36,6 +36,14 @@ else
     exit 1
 fi
 
-ls -laR /Applications/XAMPP/xamppfiles/htdocs/codespace/workshop3/
+ls -laR $DEST_DIR
+
+
+# Set directory permissions to 755 (read and execute for everyone, write for owner)
+chmod 755 $DEST_DIR/public/assets
+chmod 755 $DEST_DIR/public/assets/images
+
+# Set file permissions to 644 (read for everyone, write for owner)
+chmod 644 $DEST_DIR/public/assets/images/*
 
 exit 0
