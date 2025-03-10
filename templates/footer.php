@@ -1,4 +1,4 @@
-<footer class="footer mt-auto py-3 bg-dark">
+<footer class="footer mt-auto py-3 bg-dark fixed-bottom">
     <div class="container">
         <span class="text-muted">© 2025 Your Company. All rights reserved.</span>
     </div>
