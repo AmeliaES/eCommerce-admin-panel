@@ -41,7 +41,9 @@ include '../templates/nav.php';
                     value="<?php if (isset($_POST['item_price'])) echo $_POST['item_price']; ?>">
 
                 <!-- submit button -->
-                <input type="submit" class="btn btn-dark" value="Submit">
+                <div class="text-center">
+                    <input type="submit" class="btn btn-dark" value="Submit">
+                </div>
             </form>
         </div>
     </div>
