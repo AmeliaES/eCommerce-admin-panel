@@ -5,7 +5,7 @@ include '../templates/nav.php';
 <div class="container-sm">
     <div class="row justify-content-center">
         <div class="col-12 col-md-6">
-            <h1>Update Item</h1>
+            <h1 class="mt-4">Update Item</h1>
             <form action="update.php" method="post">
                 <!-- update box for item id  -->
                 <label for="id">Item Id:</label>
@@ -41,7 +41,7 @@ include '../templates/nav.php';
                     value="<?php if (isset($_POST['item_price'])) echo $_POST['item_price']; ?>">
 
                 <!-- submit button -->
-                <div class="text-center">
+                <div class="text-center mt-4">
                     <input type="submit" class="btn btn-dark" value="Submit">
                 </div>
             </form>

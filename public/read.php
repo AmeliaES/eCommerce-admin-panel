@@ -14,7 +14,7 @@ if (mysqli_num_rows($result) > 0) {
     echo '<div class="container"><div class="row">';
     while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
         echo '
-        <div class="col-md-3 d-flex justify-content-center">
+        <div class="col-md-3 d-flex justify-content-center mt-4">
             <div class="card" style="width: 18rem;">
                 <img src="../' . $row['item_img'] . '" class="card-img-top" alt="T-Shirt">
                 <div class="card-body">

@@ -6,7 +6,7 @@ include '../templates/nav.php';
 <div class="container-sm">
     <div class="row justify-content-center">
         <div class="col-12 col-md-6">
-            <h1>Create Item</h1>
+            <h1 class="mt-4">Create Item</h1>
             <form action="create.php" method="post" enctype="multipart/form-data">
                 <!-- input box for item name -->
                 <div class="mb-3">
