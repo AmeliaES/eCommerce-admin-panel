@@ -18,11 +18,11 @@
 .
 ├── .githooks
 │   └── post-commit
+├── .gitignore
 ├── README.md
 ├── includes
 │   └── database.php
 ├── public
-│   ├── .gitignore
 │   ├── assets
 │   │   └── images
 │   │       ├── blue_tshirt.png
@@ -39,6 +39,12 @@
     ├── footer.php
     └── nav.php
 ```
+
+- `sql/` contains the code used to create the initial SQL database and tables, which are empty.
+-  `includes/` contains the PHP code to connect to the SQL database.
+- `templates/` contains PHP code for the navigation bar and footer, which are used on all pages.
+- `public/` contains all the pages browsed by the application. It also includes a subfolder for images where images for the items can be uploaded to select from when creating or updating an item.
+
 
 ## Set up git hooks - post commit 
 This ensures the files are copied to the web server at XAMPP, so we don't have to manually do this. Certain file types and folders are ignored for transfer. eg. the `sql/` folder is not copied. I wasn't sure where to put the SQL scripts to initially make the database in phpMyAdmin but wanted to make sure they are git tracked.
