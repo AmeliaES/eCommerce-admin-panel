@@ -16,7 +16,7 @@
     </head>
     <body>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <a class="navbar-brand" href="#">CRUD Example</a>
+            <a class="navbar-brand" href="/codespace/workshop3/public/index.php">CRUD Example</a>
             <button class="navbar-toggler" type="button" 
             data-toggle="collapse" 
             data-target="#navbarNav" 
