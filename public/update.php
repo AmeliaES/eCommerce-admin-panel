@@ -2,44 +2,50 @@
 include '../templates/nav.php';
 ?>
 
-<h1>Update Item</h1>
-<form action="update.php" method="post">
-    <!-- update box for item id  -->
-    <label for="id">Item Id:</label>
-    <input type="text"
-           name="item_id"
-           class="form-control"
-           value="<?php if (isset($_POST['item_id'])) echo $_POST['item_id']; ?>">
-    
-    <!-- update box for item name  -->
-    <label for="name">Item Name:</label>
-    <input type="text"
-           name="item_name"
-           class="form-control"
-           value="<?php if (isset($_POST['item_name'])) echo $_POST['item_name']; ?>">
+<div class="container-sm">
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-6">
+            <h1>Update Item</h1>
+            <form action="update.php" method="post">
+                <!-- update box for item id  -->
+                <label for="id">Item Id:</label>
+                <input type="text"
+                    name="item_id"
+                    class="form-control"
+                    value="<?php if (isset($_POST['item_id'])) echo $_POST['item_id']; ?>">
+                
+                <!-- update box for item name  -->
+                <label for="name">Item Name:</label>
+                <input type="text"
+                    name="item_name"
+                    class="form-control"
+                    value="<?php if (isset($_POST['item_name'])) echo $_POST['item_name']; ?>">
 
-    <!-- update box for item description  -->
-    <label for="desc">Description:</label>
-    <textarea name="item_desc"
-              class="form-control"><?php if (isset($_POST['item_desc'])) echo $_POST['item_desc']; ?></textarea>
+                <!-- update box for item description  -->
+                <label for="desc">Description:</label>
+                <textarea name="item_desc"
+                        class="form-control"><?php if (isset($_POST['item_desc'])) echo $_POST['item_desc']; ?></textarea>
 
-    <!-- update box for item image  -->
-    <label for="img">Image:</label>
-    <input type="text"
-           name="item_img"
-           class="form-control"
-           value="<?php if (isset($_POST['item_img'])) echo $_POST['item_img']; ?>">
+                <!-- update box for item image  -->
+                <label for="img">Image:</label>
+                <input type="text"
+                    name="item_img"
+                    class="form-control"
+                    value="<?php if (isset($_POST['item_img'])) echo $_POST['item_img']; ?>">
 
-    <!-- update box for item price  -->
-    <label for="price">Price:</label>
-    <input type="text"
-           name="item_price"
-           class="form-control"
-           value="<?php if (isset($_POST['item_price'])) echo $_POST['item_price']; ?>">
+                <!-- update box for item price  -->
+                <label for="price">Price:</label>
+                <input type="text"
+                    name="item_price"
+                    class="form-control"
+                    value="<?php if (isset($_POST['item_price'])) echo $_POST['item_price']; ?>">
 
-    <!-- submit button -->
-    <input type="submit" class="btn btn-dark" value="Submit">
-</form>
+                <!-- submit button -->
+                <input type="submit" class="btn btn-dark" value="Submit">
+            </form>
+        </div>
+    </div>
+</div>    
 
 <?php
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
