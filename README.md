@@ -1,9 +1,9 @@
 # Admin panel for an eCommerce shop
 
 
-## Challenge description
+## Task description
 
-"In this challenge, you are tasked with creating an admin panel for an eCommerce shop using PHP and a MySQL database. The goal is to implement basic CRUD (Create, Read, Update, Delete) functionality for managing product records within the database.
+"Create an admin panel for an eCommerce shop using PHP and a MySQL database. The goal is to implement basic CRUD (Create, Read, Update, Delete) functionality for managing product records within the database.
 
 - Organise your challenge into clear files and folders.
 - Include SQL queries in your PHP scripts for database operations (e.g., INSERT, SELECT, UPDATE, DELETE).
@@ -21,12 +21,18 @@
 ├── README.md
 ├── includes
 │   └── database.php
-├── index.php
 ├── public
+│   ├── .gitignore
+│   ├── assets
+│   │   └── images
+│   │       ├── blue_tshirt.png
+│   │       ├── red_tshirt.png
+│   │       └── yellow_tshirt.png
 │   ├── create.php
+│   ├── delete.php
 │   ├── index.php
-│   └── read.php
-├── read.php
+│   ├── read.php
+│   └── update.php
 ├── sql
 │   └── create_tables.sql
 └── templates
